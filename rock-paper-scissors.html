@@ -83,7 +83,7 @@ alert(`You picked Rock. Computer picked ${RComputerMove}. ${RRes}`);
 
   }else if(PaperR >= 2/3 && PaperR < 1){
     
-    Pcm = 'Sciccors';
+    Pcm = 'Scissors';
   }
 
   let Pres = '';
@@ -99,11 +99,39 @@ Pres = 'You Tied.';
   Pres = 'You Win.';
 }
 
-alert(`You picked Rock. Computer picked ${RComputerMove}. ${RRes}`);
+alert(`You picked Paper. Computer picked ${Pcm}. ${Pres}`);
 
   ">Paper</button>
 
-    <button>Scissors</button>
+    <button onclick="
+
+     /* 
+  SciccorsR = Scissors Random Number
+  Scm = Sciccors Computer Move
+  Sres = Sciccors result
+  */
+
+    
+    const SciccorsR = Math.random();
+    let Scm = '';
+
+    if(SciccorsR  >= 0 && SciccorsR  < 1/3){
+
+    Pcm = 'Rock';
+    
+  }else if(SciccorsR  >= 1/3 && SciccorsR  < 2/3){
+
+    Pcm = 'Paper';
+
+  }else if(SciccorsR  >= 2/3 && SciccorsR  < 1){
+    
+    Pcm = 'Scissors';
+  }
+
+    
+    
+    
+    ">Scissors</button>
 
 
 
