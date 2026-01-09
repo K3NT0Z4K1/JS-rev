@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Rock Paper Sciccors</p>
+
+    <button onclick="
+
+  
+  /* 
+  RockR = Paper Random Number
+  RComputerMove = Rock Computer Move
+  RRes = Rock result
+  */
+
+  const rockR = Math.random();
+  let RComputerMove = '';
+
+  if(rockR >= 0 && rockR < 1/3){
+
+    RComputerMove = 'Rock';
+    
+  }else if(rockR >= 1/3 && rockR < 2/3){
+
+    RComputerMove = 'Paper';
+
+  }else if(rockR >= 2/3 && rockR < 1){
+    
+    RComputerMove = 'Sciccors';
+  }
+
+  // console.log(RComputerMove);
+
+  let RRes = '';
+
+if(RComputerMove === 'Rock'){
+
+  RRes = 'You tied.';
+
+}else if(RComputerMove === 'Paper'){
+
+  RRes = 'You Lose.';
+
+}else if(RComputerMove === 'Sciccors'){
+
+  RRes = 'You Won.';
+
+}
+
+// console.log(RRes);
+
+alert(`You picked Rock. Computer picked ${RComputerMove}. ${RRes}`);
+
+
+">Rock</button>
+
+
+    <button onclick="
+
+  /* 
+  PaperR = Paper Random Number
+  Pcm = Paper Computer Move
+  Pres = Paper result
+  */
+
+  const PaperR = Math.random();
+  let Pcm = '';
+
+   if(PaperR >= 0 && PaperR < 1/3){
+
+    Pcm = 'Rock';
+    
+  }else if(PaperR >= 1/3 && PaperR < 2/3){
+
+    Pcm = 'Paper';
+
+  }else if(PaperR >= 2/3 && PaperR < 1){
+    
+    Pcm = 'Sciccors';
+  }
+
+  let Pres = '';
+
+
+
+if(Pcm === 'Paper'){
+
+Pres = 'You Tied.';
+}else if( Pcm === 'Scissors'){
+  Pres = 'You Lose.';
+}else if(Pcm === 'Rock'){
+  Pres = 'You Win.';
+}
+
+alert(`You picked Rock. Computer picked ${RComputerMove}. ${RRes}`);
+
+  ">Paper</button>
+
+    <button>Scissors</button>
+
+
+
+
+
+</body>
+
+</html>
