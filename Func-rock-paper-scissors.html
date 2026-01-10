@@ -14,41 +14,26 @@
     <button onclick="
 
 
-  const rockR = Math.random();
-  let RComputerMove = '';
-
-  if(rockR >= 0 && rockR < 1/3){
-
-    RComputerMove = 'Rock';
-    
-  }else if(rockR >= 1/3 && rockR < 2/3){
-
-    RComputerMove = 'Paper';
-
-  }else if(rockR >= 2/3 && rockR < 1){
-    
-    RComputerMove = 'Sciccors';
-  }
-
+ 
 
   let RRes = '';
 
-if(RComputerMove === 'Rock'){
+if(ComputerMove === 'Rock'){
 
   RRes = 'You tied.';
 
-}else if(RComputerMove === 'Paper'){
+}else if(ComputerMove === 'Paper'){
 
   RRes = 'You Lose.';
 
-}else if(RComputerMove === 'Sciccors'){
+}else if(ComputerMove === 'Sciccors'){
 
   RRes = 'You Won.';
 
 }
 
 
-alert(`You picked Rock. Computer picked ${RComputerMove}. ${RRes}`);
+alert(`You picked Rock. Computer picked ${ComputerMove}. ${RRes}`);
 
 
 ">Rock</button>
@@ -56,24 +41,21 @@ alert(`You picked Rock. Computer picked ${RComputerMove}. ${RRes}`);
 
     <button onclick="
 
+    pickComputerMove();
+    
  
+  let Result = '';
 
-  
+if(ComputerMove === 'Paper'){
 
-  let Pres = '';
-
-
-
-if(Pcm === 'Paper'){
-
-Pres = 'You Tied.';
-}else if( Pcm === 'Scissors'){
-  Pres = 'You Lose.';
-}else if(Pcm === 'Rock'){
-  Pres = 'You Win.';
+Result = 'You Tied.';
+}else if( ComputerMove === 'Scissors'){
+  Result = 'You Lose.';
+}else if(ComputerMove === 'Rock'){
+  Result = 'You Win.';
 }
 
-alert(`You picked Paper. Computer picked ${Pcm}. ${Pres}`);
+alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result}`);
 
   ">Paper</button>
 
@@ -86,15 +68,15 @@ alert(`You picked Paper. Computer picked ${Pcm}. ${Pres}`);
 
     if(SciccorsR  >= 0 && SciccorsR  < 1/3){
 
-        Pcm = 'Rock';
+        ComputerMove = 'Rock';
         
       }else if(SciccorsR  >= 1/3 && SciccorsR  < 2/3){
 
-        Pcm = 'Paper';
+        ComputerMove = 'Paper';
 
       }else if(SciccorsR  >= 2/3 && SciccorsR  < 1){
         
-        Pcm = 'Scissors';
+        ComputerMove = 'Scissors';
       }
 
     let Sres = '';
@@ -123,23 +105,28 @@ alert(`You picked Paper. Computer picked ${Pcm}. ${Pres}`);
 
 
     <script>
+        let ComputerMove = '';
+
         function pickComputerMove() {
 
-            const PaperR = Math.random();
-            let Pcm = '';
+            const RandomNumber = Math.random();
 
-            if (PaperR >= 0 && PaperR < 1 / 3) {
 
-                Pcm = 'Rock';
+            if (RandomNumber >= 0 && RandomNumber < 1 / 3) {
 
-            } else if (PaperR >= 1 / 3 && PaperR < 2 / 3) {
+                ComputerMove = 'Rock';
 
-                Pcm = 'Paper';
+            } else if (RandomNumber >= 1 / 3 && RandomNumber < 2 / 3) {
 
-            } else if (PaperR >= 2 / 3 && PaperR < 1) {
+                ComputerMove = 'Paper';
 
-                Pcm = 'Scissors';
+            } else if (RandomNumber >= 2 / 3 && RandomNumber < 1) {
+
+                ComputerMove = 'Sciccors';
             }
+
+
+
         }
     </script>
 
