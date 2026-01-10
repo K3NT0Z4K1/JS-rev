@@ -11,30 +11,8 @@
 
     <p>Rock Paper Sciccors</p>
 
-    <button onclick="
+    <button onclick=" pickComputerMove();
 
-     pickComputerMove();
-
-
-
-  let Result = '';
-
-if(ComputerMove === 'Rock'){
-
-  Result = 'You tied.';
-
-}else if(ComputerMove === 'Paper'){
-
-  Result = 'You Lose.';
-
-}else if(ComputerMove === 'Sciccors'){
-
-  Result = 'You Won.';
-
-}
-
-
-alert(`You picked Rock. Computer picked ${ComputerMove}. ${Result}`);
 
 
 ">Rock</button>
@@ -45,60 +23,45 @@ alert(`You picked Rock. Computer picked ${ComputerMove}. ${Result}`);
     pickComputerMove();
     
  
-  let Result = '';
+  let Result1 = '';
 
 if(ComputerMove === 'Paper'){
 
-Result = 'You Tied.';
+Result1 = 'You Tied.';
 }else if( ComputerMove === 'Scissors'){
-  Result = 'You Lose.';
+  Result1 = 'You Lost.';
 }else if(ComputerMove === 'Rock'){
-  Result = 'You Win.';
+  Resul1t = 'You Win.';
 }
 
-alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result}`);
+alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result1}`);
 
   ">Paper</button>
 
     <button onclick="
 
-
-    
-    const SciccorsR = Math.random();
-    let Scm = '';
-
-    if(SciccorsR  >= 0 && SciccorsR  < 1/3){
-
-        ComputerMove = 'Rock';
-        
-      }else if(SciccorsR  >= 1/3 && SciccorsR  < 2/3){
-
-        ComputerMove = 'Paper';
-
-      }else if(SciccorsR  >= 2/3 && SciccorsR  < 1){
-        
-        ComputerMove = 'Scissors';
-      }
-
-    let Result = '';
-
-    if(SciccorsR === 'Scissors'){
-
-      Result = 'You Tied';
-
-    }else if(SciccorsR === 'Rock'){
-
-      Result = 'You Lose';
+    pickComputerMove();
 
 
-    }else if(SciccorsR === 'Paper'){
+    let Result2 = '';
 
-      Result = 'You Won';
+    if(ComputerMove === 'Scissors'){
+
+      Result2 = 'You Tied';
+
+    }else if(ComputerMove === 'Rock'){
+
+      Result2 = 'You Lost';
+
+
+    }else if(ComputerMove === 'Paper'){
+
+      Result2 = 'You Won';
 
     }
 
 
-    alert(`You picked Scissors. Computer picked ${Scm}. ${Result}`);
+    alert(`You picked Scissors. Computer picked ${ComputerMove}. ${Result2}`);
     
     
     
@@ -126,8 +89,27 @@ alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result}`);
                 ComputerMove = 'Scissors';
             }
 
+        }
 
+        function Result() {
 
+            let Result = '';
+
+            if (ComputerMove === 'Rock') {
+
+                Result = 'You tied.';
+
+            } else if (ComputerMove === 'Paper') {
+
+                Result = 'You Lost.';
+
+            } else if (ComputerMove === 'Scissors') {
+
+                Result = 'You Won.';
+
+            }
+
+            alert(`You picked Rock. Computer picked ${ComputerMove}. ${Result}`);
         }
     </script>
 
