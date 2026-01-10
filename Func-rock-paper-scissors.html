@@ -11,31 +11,14 @@
 
     <p>Rock Paper Sciccors</p>
 
-    <button onclick=" pickComputerMove();
-
-
-
-">Rock</button>
-
+    <button onclick=" pickComputerMove(); Result();">Rock</button>
 
     <button onclick="
 
     pickComputerMove();
     
  
-  let Result1 = '';
-
-if(ComputerMove === 'Paper'){
-
-Result1 = 'You Tied.';
-}else if( ComputerMove === 'Scissors'){
-  Result1 = 'You Lost.';
-}else if(ComputerMove === 'Rock'){
-  Resul1t = 'You Win.';
-}
-
-alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result1}`);
-
+  
   ">Paper</button>
 
     <button onclick="
@@ -43,25 +26,6 @@ alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result1}`);
     pickComputerMove();
 
 
-    let Result2 = '';
-
-    if(ComputerMove === 'Scissors'){
-
-      Result2 = 'You Tied';
-
-    }else if(ComputerMove === 'Rock'){
-
-      Result2 = 'You Lost';
-
-
-    }else if(ComputerMove === 'Paper'){
-
-      Result2 = 'You Won';
-
-    }
-
-
-    alert(`You picked Scissors. Computer picked ${ComputerMove}. ${Result2}`);
     
     
     
@@ -110,6 +74,49 @@ alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result1}`);
             }
 
             alert(`You picked Rock. Computer picked ${ComputerMove}. ${Result}`);
+        }
+
+        function Result1() {
+
+            let Result1 = '';
+
+            if (ComputerMove === 'Paper') {
+
+                Result1 = 'You Tied.';
+            } else if (ComputerMove === 'Scissors') {
+                Result1 = 'You Lost.';
+            } else if (ComputerMove === 'Rock') {
+                Resul1t = 'You Win.';
+            }
+
+            alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result1}`);
+
+        }
+
+        function Result2() {
+
+            let Result2 = '';
+
+            if (ComputerMove === 'Scissors') {
+
+                Result2 = 'You Tied';
+
+            } else if (ComputerMove === 'Rock') {
+
+                Result2 = 'You Lost';
+
+
+            } else if (ComputerMove === 'Paper') {
+
+                Result2 = 'You Won';
+
+            }
+
+
+            alert(`You picked Scissors. Computer picked ${ComputerMove}. ${Result2}`);
+
+
+
         }
     </script>
 
