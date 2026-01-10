@@ -13,27 +13,28 @@
 
     <button onclick="
 
+     pickComputerMove();
 
- 
 
-  let RRes = '';
+
+  let Result = '';
 
 if(ComputerMove === 'Rock'){
 
-  RRes = 'You tied.';
+  Result = 'You tied.';
 
 }else if(ComputerMove === 'Paper'){
 
-  RRes = 'You Lose.';
+  Result = 'You Lose.';
 
 }else if(ComputerMove === 'Sciccors'){
 
-  RRes = 'You Won.';
+  Result = 'You Won.';
 
 }
 
 
-alert(`You picked Rock. Computer picked ${ComputerMove}. ${RRes}`);
+alert(`You picked Rock. Computer picked ${ComputerMove}. ${Result}`);
 
 
 ">Rock</button>
@@ -79,25 +80,25 @@ alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result}`);
         ComputerMove = 'Scissors';
       }
 
-    let Sres = '';
+    let Result = '';
 
-    if(SciccorsR === 'Sciccors'){
+    if(SciccorsR === 'Scissors'){
 
-      Sres = 'You Tied';
+      Result = 'You Tied';
 
     }else if(SciccorsR === 'Rock'){
 
-      Sres = 'You Lose';
+      Result = 'You Lose';
 
 
     }else if(SciccorsR === 'Paper'){
 
-      Sres = 'You Won';
+      Result = 'You Won';
 
     }
 
 
-    alert(`You picked Scissors. Computer picked ${Scm}. ${Sres}`);
+    alert(`You picked Scissors. Computer picked ${Scm}. ${Result}`);
     
     
     
@@ -122,7 +123,7 @@ alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result}`);
 
             } else if (RandomNumber >= 2 / 3 && RandomNumber < 1) {
 
-                ComputerMove = 'Sciccors';
+                ComputerMove = 'Scissors';
             }
 
 
