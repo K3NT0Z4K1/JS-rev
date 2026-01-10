@@ -14,11 +14,11 @@
 
     <p>Rock Paper Sciccors</p>
 
-    <button onclick=" const rcm = pickComputerMove(); let rr = Result('Rock'); ">Rock</button>
+    <button onclick=" Result('Rock'); ">Rock</button>
 
-    <button onclick=" const pcm = pickComputerMove(); let pr = Result('Paper');">Paper</button>
+    <button onclick=" Result('Paper');">Paper</button>
 
-    <button onclick=" const scm =pickComputerMove(); let sr = Result('Scissors');">Scissors</button>
+    <button onclick=" Result('Scissors');">Scissors</button>
 
 
     <script>
@@ -45,6 +45,8 @@
         }
 
         function Result(move) {
+
+            const ComputerMove = pickComputerMove();
 
             if (ComputerMove === move) {
 
