@@ -17,7 +17,7 @@
     <button onclick=" 
     
         const ComputerMove = pickComputerMove();     
-        Result();
+        Result('Rock');
         
     ">Rock</button>
 
@@ -49,66 +49,29 @@
 
         }
 
-        function Result() {
+        function Result(move) {
 
-            if (ComputerMove === 'Rock') {
+            if (ComputerMove === move) {
 
                 Result = 'You tied.';
 
-            } else if (ComputerMove === 'Paper') {
+            } else if (
+                (ComputerMove === 'Paper' && move === 'Rock') ||
+                (ComputerMove === 'Rock' && move === 'Scissors') ||
+                (ComputerMove === 'Scissors' && move === 'Paper')) {
 
                 Result = 'You Lost.';
 
-            } else if (ComputerMove === 'Scissors') {
+            } else if (
+                (ComputerMove === 'Scissors' && move === 'Rock') ||
+                (ComputerMove === 'Rock' && move === 'Paper') ||
+                (ComputerMove === 'Paper' && move === 'Scissors')) {
 
                 Result = 'You Won.';
 
             }
 
             alert(`You picked Rock. Computer picked ${ComputerMove}. ${Result}`);
-
-        }
-
-
-
-        function Result1() {
-
-            let Result1 = '';
-
-            if (ComputerMove === 'Paper') {
-
-                Result1 = 'You Tied.';
-            } else if (ComputerMove === 'Scissors') {
-                Result1 = 'You Lost.';
-            } else if (ComputerMove === 'Rock') {
-                Resul1t = 'You Win.';
-            }
-
-            alert(`You picked Paper. Computer picked ${ComputerMove}. ${Result1}`);
-
-        }
-
-        function Result2() {
-
-            let Result2 = '';
-
-            if (ComputerMove === 'Scissors') {
-
-                Result2 = 'You Tied';
-
-            } else if (ComputerMove === 'Rock') {
-
-                Result2 = 'You Lost';
-
-
-            } else if (ComputerMove === 'Paper') {
-
-                Result2 = 'You Won';
-
-            }
-
-
-            alert(`You picked Scissors. Computer picked ${ComputerMove}. ${Result2}`);
 
         }
     </script>
