@@ -9,6 +9,47 @@
 
 <body>
 
+
+    <script>
+        function convertToKm(num) {
+
+            const miles = num * 1.60;
+
+            return miles;
+
+        }
+
+        function convertToMiles(num) {
+
+            const km = num / 1.60;
+
+            return km;
+
+
+        }
+
+        function convertLength(length, from, to) {
+
+            if (from === 'miles' && to === 'km') {
+
+                const con = convertToKm(length);
+                console.log(`${con} km`);
+
+            } else if (from === 'km' && to === 'miles') {
+
+                const con = convertToMiles(length);
+                console.log(`${con} miles`);
+
+
+            }
+
+
+
+        }
+
+        convertLength(32, 'km', 'miles');
+    </script>
+
 </body>
 
 </html>
