@@ -9,6 +9,45 @@
 
 <body>
 
+    <script>
+        function convertToFarenheit(celsius) {
+
+            const farenheit = (celsius * 9 / 5) + 32;
+
+            return farenheit + '°F';
+        }
+
+        function convertToCelcius(farenheit) {
+
+            const celsius = (farenheit - 32) * 5 / 9;
+
+            return celsius + '°C';
+        }
+
+        function convertTemperature(degrees, unit) {
+
+            if (unit === 'C') {
+
+                const converted = convertToFarenheit(degrees);
+
+                console.log(converted);
+
+            } else if (unit === 'F') {
+
+                const converted = convertToCelcius(degrees);
+
+                console.log(converted);
+            } else {
+
+                console.log('Invalid Unit');
+            }
+
+        }
+
+
+        convertTemperature(25, 'C');
+    </script>
+
 </body>
 
 </html>
