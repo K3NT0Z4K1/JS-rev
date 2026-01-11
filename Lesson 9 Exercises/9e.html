@@ -7,9 +7,11 @@
 </head>
 <body>
 
-  <input class="js-name-input" type="text" placeholder="Name">
+  <input  placeholder="Name" class="js-name-input" onkeydown="
+    
+    enterEnterKey(event);">
 
-  <button onclick="submitNameElem()">Submit</button>
+  <button  onclick="submitNameElem()" >Submit</button>
 
   <p></p>
 
@@ -20,9 +22,18 @@
 
       const inputNameElement = document.querySelector('.js-name-input')
 
-      const name = inputNameElement.value;
+      let name = inputNameElement.value;
 
       document.querySelector('p').innerHTML = name;
+
+    }
+
+    function enterEnterKey(event){
+
+        if(event.key === 'Enter'){
+
+        submitNameElem();
+  }
 
 
 
