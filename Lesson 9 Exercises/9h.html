@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+
+  <input class="js-input-something" type="text" placeholder="Type Something" onkeyup=" typeSomething(event) " >
+
+  <p></p>
+
+  <script>
+
+    function typeSomething(event){
+
+      
+      // const somethingElem = document.querySelector('js-input-something');
+
+      const inputElem = event.key;
+
+      document.querySelector('p').innerHTML = inputElem;
+
+
+
+
+    }
+  </script>
+  
+</body>
+</html>
